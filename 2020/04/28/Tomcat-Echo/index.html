@@ -22,7 +22,7 @@
 
   <meta name="description" content="中间件context回显方式12345678# Weblogic回显1. Thread -&gt; getCurrentWork --&gt; context2. Thread --&gt; getCurrentWork --&gt; connectionHandler --&gt; context# Spring Boot回显1. org.springframework.web.context.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tomcat通用回显 &amp; Shiro 通用回显">
+<meta property="og:title" content="Tomcat通用回显 &amp; Shiro 回显利用">
 <meta property="og:url" content="http://yoursite.com/2020/04/28/Tomcat-Echo/index.html">
 <meta property="og:site_name" content="Corener">
 <meta property="og:description" content="中间件context回显方式12345678# Weblogic回显1. Thread -&gt; getCurrentWork --&gt; context2. Thread --&gt; getCurrentWork --&gt; connectionHandler --&gt; context# Spring Boot回显1. org.springframework.web.context.">
@@ -30,9 +30,9 @@
 <meta property="og:image" content="http://yoursite.com/images/15880587778842/15880610868827.jpg">
 <meta property="og:image" content="http://yoursite.com/images/15880587778842/15880656474611.jpg">
 <meta property="og:image" content="http://yoursite.com/images/15880587778842/15880668128367.jpg">
-<meta property="og:image" content="http://yoursite.com/images/15880587778842/back.gif">
-<meta property="article:published_time" content="2020-04-28T15:25:23.872Z">
-<meta property="article:modified_time" content="2020-04-28T15:25:23.872Z">
+<meta property="og:image" content="http://yoursite.com/images/15880587778842/15880889250604.jpg">
+<meta property="article:published_time" content="2020-04-28T15:53:34.975Z">
+<meta property="article:modified_time" content="2020-04-28T15:53:34.971Z">
 <meta property="article:author" content="Corener">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>Tomcat通用回显 & Shiro 通用回显 | Corener</title>
+  <title>Tomcat通用回显 & Shiro 回显利用 | Corener</title>
   
 
 
@@ -180,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Tomcat通用回显 & Shiro 通用回显
+          Tomcat通用回显 & Shiro 回显利用
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-04-28 23:25:23" itemprop="dateCreated datePublished" datetime="2020-04-28T23:25:23+08:00">2020-04-28</time>
+              <time title="Created: 2020-04-28 23:53:34" itemprop="dateCreated datePublished" datetime="2020-04-28T23:53:34+08:00">2020-04-28</time>
             </span>
 
           
@@ -228,7 +228,7 @@
 
 <p>效果</p>
 <p><img src="/images/15880587778842/15880668128367.jpg" alt=""></p>
-<h3 id="孵化-Shiro回显"><a href="#孵化-Shiro回显" class="headerlink" title="孵化 Shiro回显"></a>孵化 Shiro回显</h3><p>利用“Get Tomcat Request”思路，经过极致压缩，基本实现通版本的Shiro回显效果。<br><img src="/images/15880587778842/back.gif" alt="back"></p>
+<h3 id="孵化-Shiro回显"><a href="#孵化-Shiro回显" class="headerlink" title="孵化 Shiro回显"></a>孵化 Shiro回显</h3><p>利用“Get Tomcat Request”思路，经过极致压缩，基本实现通版本的Shiro回显效果。<br><img src="/images/15880587778842/15880889250604.jpg" alt=""></p>
 <h3 id="彩蛋-websphere回显"><a href="#彩蛋-websphere回显" class="headerlink" title="彩蛋 websphere回显"></a>彩蛋 websphere回显</h3><p>尚未实例测试</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Thread t &#x3D; Thread.currentThread();</span><br><span class="line">Field wsThreadLocals &#x3D; t.getClass().getDeclaredField(&quot;wsThreadLocals&quot;);</span><br><span class="line">wsThreadLocals.setAccessible(true);</span><br><span class="line">Object[] obs &#x3D; (Object[])wsThreadLocals.get(t);</span><br><span class="line">WebContainerRequestState wr &#x3D; (WebContainerRequestState)obs[36];</span><br><span class="line">wr.getCurrentThreadsIExtendedRequest().getRequestURL();</span><br></pre></td></tr></table></figure>
 
